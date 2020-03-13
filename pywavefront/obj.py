@@ -249,6 +249,10 @@ class ObjParser(Parser):
         self.mesh = Mesh(self.values[1], has_faces=self.collect_faces)
         self.wavefront.add_mesh(self.mesh)
 
+    @auto_consume
+    def parse_s(self):
+        pass
+
     def parse_f(self):
         # Add default material if not created
         if self.material is None:
